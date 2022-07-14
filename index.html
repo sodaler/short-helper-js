@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet beatae consectetur corporis ducimus est eveniet excepturi exercitationem facilis illo ipsum, laboriosam nisi nobis odio quis recusandae sint velit voluptatem!
+    </div>
+<div>
+    <button class="btn" onclick="sayHello()">Click me</button>
+</div>
+</body>
+<script>
+    // variables
+    var firstVar = 'hello'
+    let secondVar = 'wow' // new version, can change
+    const thirdVar = 'lol' // can't change
+
+    // data types
+    let someString = 'string'
+    let someNum = 123
+    let someBoolean = true
+    let someNull = null
+    let someNan = NaN // not a number
+    let someUndefined = undefined // not assigned value
+
+    // arrays
+    let someArray = ['string', 123, false];
+
+    // object
+    let someObj = {
+        someKey: 100,
+        someString: '100',
+        someArray: [100, 'string'],
+    } // key: value (obj = associative array in php)
+
+    // function
+    function someFunc() {
+        return 'someString from function'
+    }
+
+    let anotherFunc = function () {
+        return 'this another func'
+    }
+
+    // statements
+    if (someBoolean) {
+        console.log('hello')
+    } else {
+        console.log('wow')
+    }
+
+    let person = someBoolean ? 'Ivan' : 'Victor'
+
+    // loops
+    let someArr = ['Ivan', 'Elena', 'Mila']
+
+    someArr.forEach(function (item, index) {
+        console.log(item, index)
+    }) // work with arrays (not objects!)
+
+    for (let someObjKey in someObj) {
+        console.log(someObj[someObjKey])
+    }
+
+    Object.entries(someObj).forEach(function (item) {
+        console.log(item)
+    })
+
+    // all in js - objects (check prototype)
+    let newString = new String('hi!');
+    console.log(newString);
+
+    // DOM
+    let $box = document.querySelector('.box')
+    
+    // event (check btn)
+    function sayHello() {
+        $box.remove()
+    }
+
+</script>
+</html>
